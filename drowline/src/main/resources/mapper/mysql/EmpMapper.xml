@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.harry.scm.test.mapper.EmpMapper">
+    <parameterMap type="com.harry.scm.entity.Emp" id="parameterMapEmp">
+        <parameter property="name"/>
+    </parameterMap>
+
+    <resultMap type="com.harry.scm.entity.Emp" id="resultMapEmp">
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <insert id="insertEmp" parameterMap="parameterMapEmp">
+        INSERT INTO emp(name)
+        VALUES(?)
+    </insert>
+</mapper>
