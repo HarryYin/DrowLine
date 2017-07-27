@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Created by harry on 2017/7/27.
  */
+@Service
 public class EmpServiceImpl implements IEmpService {
     @Autowired
     private EmpMapper empDao;
